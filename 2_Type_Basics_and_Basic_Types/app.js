@@ -1,12 +1,11 @@
-function add(num1, num2, showResult, phrase) {
-    var result = num1 + num2;
-    if (showResult)
-        console.log(phrase + result);
-    else
-        return num1 + num2;
+function add(n1, n2) {
+    return n1 + n2;
 }
-var number1 = 5;
-var number2 = 2.8;
-var printResult = true;
-var resultPhrase = "Result is: ";
-add(number1, number2, printResult, resultPhrase);
+function printResult(num) {
+    console.log('Result: ' + num);
+}
+function addAndHandle(n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
+}
+addAndHandle(10, 20, printResult);
